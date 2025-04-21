@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkString() {
+            var inputString = document.getElementById("inputString").value;
+            var words = inputString.split(' ');
+            var count = 0;
+
+            for (var i = 0; i < words.length; i++) {
+                if (words[i].length === 4 && words[i][0].toLowerCase() === 'm') {
+                    count++;
+                }
+            }
+            document.getElementById("result").value = count;
+        }
+    </script>
+    <form action="dangnhap.cs" method="get">
+        <table>
+            <tr>
+                <td>Nhập chuỗi</td>
+                <td><input type="text" id="inputString" placeholder="Enter a string" maxlength="5"></td>
+            </tr>
+            <tr>
+                <td>Số từ có 4 ký tự</td>
+                <td><input type="text" id="result"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <button onclick="checkString()" type="button">Check</button>
+                    <button type="reset">Hủy bỏ</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

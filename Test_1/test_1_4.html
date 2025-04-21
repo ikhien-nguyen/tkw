@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0; padding: 0;
+        }
+        header{
+            width: 1000px;
+            margin: auto;
+            display: flex;
+            height: 70px;
+        }
+        header .trai img{
+            padding-top: 10px;
+            width: 100px;
+            height: 50px;
+            margin-right: 50px;
+        }
+        header .phai{
+            background-color: aqua;
+        }
+        header .phai p{
+            text-align: center;
+        }
+        input{
+            margin-left: 100px;
+        }
+        select input{
+            height: 30px;
+        }
+        nav{
+            margin-top: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+            background-color:rgb(80, 246, 204);
+            height: 50px;
+            line-height: 50px;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            width: 1000px;
+            margin: auto;
+        }
+        nav ul li{
+            padding: 0 27px;
+        }
+        nav ul li:hover{
+            background-color: red;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .contener{
+            display: flex;
+        }
+        .contener>.trai{
+            margin-left: 20px;
+
+        }
+        .contener .trai ul.doc{
+            list-style: none;
+            width: 150px;
+            border: 1px solid black;
+            
+        }
+        .contener .trai ul.doc li{
+            height: 50px;
+            box-sizing: border-box;
+            background-color: rgb(5, 167, 154);
+            width: 150px;
+            line-height: 50px;
+            padding-left: 15px;
+            position: relative;
+            border-bottom: 1px solid black;
+        }
+        .contener .trai ul.doc li a{
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contener ul.doc li ul.con{
+            position: absolute;
+            list-style: none;
+            left: 150px;
+            top: 0;
+            border: 1px solid black;
+            visibility: hidden;
+        }
+        .contener ul.doc li:hover ul.con{
+            visibility: visible;
+        }
+        .contener ul.doc li:hover{
+            background-color: aqua;
+        }
+        .contener>.phai{
+            margin-left: 100px;
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .contener .phai ._1o{
+            height: 100px;
+            width: 320px;
+            /* padding-bottom: 10px; */
+            display: flex;
+            border: 1px solid black;
+        }
+        .contener .phai ._1o .trai img{
+            width: 100px;
+            height: 100px;
+        }
+        .contener .phai ._1o .trai img:hover{
+            scale: 110%;
+        }
+        .contener>.phai ._1o .phai{
+            width: 230px;
+            background-color: rgb(212, 138, 230);
+            border-left: 1px solid black;
+        }
+        .contener .phai ._1o .phai b{
+            font-size: 20px;
+        }
+        .contener .phai ._1o .phai p, del{
+            padding-left:  10px;
+        }
+        .diachi{
+            margin: auto;
+            width: 1000px;
+            background-color: rgb(75, 206, 27);
+            
+        }
+        .diachi ._1khoi{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .diachi h3{
+            background-color: red;
+            color: white;
+            height: 50px;
+            line-height: 50px;
+        }
+        .diachi ._1o{
+            display: flex;
+            width: 240px;
+            height: 100px;
+            background-color: yellow;
+            margin-bottom: 10px;
+        }
+        .diachi ._1khoi .left{
+        }
+        .diachi ._1khoi ._1o img{
+            padding:10px 5px;
+            width: 80px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="trai"><img src="2.png" alt=""></div>
+        <div class="phai">
+            <p><b>Cảm xúc của tôi tràn đầy khi nhìn thấy ngọn đồi xanh tươi trải dài trước mắt. Tôi hít thở khí trong lành của mùa xuân, và cảm nhận sự yên bình và hài lòng tràn đầy trái tim tôi.</b></p>
+            <input type="text" required placeholder="Nhập ở đây" style="width: 500px;">
+            <select name="chon" id="chon" style="width: 50px;">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Quần áo</a></li>
+            <li><a href="">Tranh ảnh</a></li>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Trang chủ</a></li>
+            <li><a href="">Trang chủ</a></li>
+        </ul>
+    </nav>
+    <div class="contener">
+        <div class="trai">
+            <ul class="doc">
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Quần áo</a>
+                    <ul class="con">
+                        <li><a href="">Quần áo 1</a></li>
+                        <li><a href="">Quần áo 1</a></li>
+                        <li><a href="">Quần áo 1</a></li>
+                        <li><a href="">Quần áo 1</a></li>
+                        <li><a href="">Quần áo 1</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Tranh ảnh</a></li>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Trang chủ</a></li>
+                <li><a href="">Trang chủ</a></li>
+            </ul>
+        </div>
+        <div class="phai">
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="trai"><img src="matHang.png" alt=""></div>
+                <div class="phai">
+                    <p><b>Apple Cinema 30'', mới nhất, xịn nhất</b></p>
+                    <p> 259.000 đ</p>
+                    <del style="color: red; font-size: 17px;">300.000 đ</del>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="diachi">
+        <h3>HÃY ĐẶT HÀNG Ở</h3>
+        <div class="_1khoi">
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="left"><img src="1.png" alt=""></div>
+                <div class="right">
+                    <p><b>Nguyên Xá - Minh Khai - Bắc Từ Liêm - Hà Nội</b></p>
+                    <p>Số nhà 17 - Nghách 132/66/1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bài 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            display: flex;
+            width: 950px;
+            background-color: #018BC8;
+            box-sizing: border-box;
+            height: 60px;
+        }
+        ._1 img{
+            margin-right: 80px;
+            width: 100px;
+            height: 60px;
+        }
+        ._2, ._3{
+            height:60px;
+            line-height: 60px;
+        }
+        select, input{
+            height: 30px;
+            border: none;
+        }
+        input{
+            height: 28px;
+        }
+        ._4, ._5{
+            color: white;
+            padding-top: 15px;
+            border-right: 1px solid white;
+            width: 250px;
+        }
+        ._4 .fa{
+            height: 30px;
+            padding-left: 40px;
+            background-color: black;
+            padding-right: 40px;
+            line-height: 30px;
+        }
+        ._5{
+            display: flex;
+            width: 70px;
+            padding-left: 10px;
+        }
+        ._5 ._5_1{
+            padding-right: 7px;
+        }
+        ._6{
+            width: 60px;
+            padding-left: 30px;
+            color: white;
+            font-size: 25px;
+        }
+        ._6 .fa{
+            margin-top: 15px;
+            height: 25px;
+            line-height: 25px;
+            text-align: center;
+        }
+        .content{
+            margin-top: 20px;
+        }
+        ul.cha{
+            padding-left: 0;
+            width: 250px;
+            list-style: none;
+            border: 2px solid #018BC8;
+        }
+        ul.con{
+            border: 2px solid #018BC8;
+            list-style: none;
+            position: absolute;
+            top: 0;
+            display: inline;
+            left: 250px;
+            visibility: hidden;
+            background-color: white;
+        }
+        ul li:hover ul {
+            visibility: visible;
+            
+        }
+        li{
+            position: relative;
+            box-sizing: border-box;
+            padding-bottom:  20px;
+            border-bottom: 1px solid rgb(145, 221, 231);
+            width: 250px;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        .ti{
+            box-sizing: border-box;
+            padding-top: 10px;
+            padding-left: 10px;
+            background-color: #018BC8;
+            width: 253px;
+            color: white;
+            font-size: 20px;
+            height: 50px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            font-size: 20px;
+            
+        }
+        .content{
+            display: flex;
+            
+        }
+        .phai{
+            border: 2px solid black;
+            margin-left: 10px;width: 684px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .content ._1o{
+            width: 170px;
+            border-right: 1px solid gray;
+        }
+        .content ._1o img{
+            width: 100%;
+            height: 180px;
+        }
+        .ten{
+            padding-left: 5px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid gray;
+            height: 50px;
+        }
+        .gia{display: flex;}
+        .gia_that{
+            padding-top: 10px;
+            padding-left: 5px;
+            padding-right: 20px;
+        }
+        .sale{
+            margin-top: 5px;
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 15%;
+        }
+        .gia_cu{
+            padding-left: 5px;
+            border-bottom: 1px solid gray;
+            padding-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="_1"><img src="1.png" alt=""></div>
+        <div class="_2">
+            <select name="chon" id="chon">
+                <option value="chon1">Chọn 1</option>
+                <option value="chon2">Chọn 2</option>
+                <option value="chon3">Chọn 3</option>
+                <option value="chon4">Chọn 4</option>
+                <option value="chon5">Chọn 5</option>
+            </select>
+        </div>
+        <div class="_3">
+            <input type="text" style="width: 300px;" required placeholder="Search for product">
+        </div>
+        <div class="_4"><div class="fa fa-search">   Search</div></div>
+        <div class="_5">
+            <div class="_5_1">Cart</div>
+            <div class="_5_2"><i class="fa fa-shopping-cart" aria-hidden="true"></i></div>
+        </div>
+        <div class="_6"><i class="fa fa-user-o" aria-hidden="true"></i></div>
+    </header>
+    <div class="content">
+        <div class="trai">
+            <div class="ti">ALL CATEGORY</div>
+            <ul class="cha">
+                <li><a href="">Home</a></li>
+                <li><a href="">Blog</a></li>
+                <li>
+                    <a href="">Laptops</a>
+                    <ul class="con">
+                        <li><a href="">Dell</a></li>
+                        <li><a href="">Men</a></li>
+                        <li><a href="">Purse</a></li>
+                        <li><a href="">Dell</a></li>
+                        <li><a href="">Dell</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Shocks</a></li>
+                <li><a href="">Cloth</a></li>
+                <li><a href="">Cosmetic</a></li>
+                <li><a href="">Desktops</a></li>
+                <li><a href="">Kids</a></li>
+                <li><a href="">MP3 Players</a></li>
+                <li><a href="">Perfume</a></li>
+            </ul>
+        </div>
+        <div class="phai">
+            <div class="_1o">
+                <img src="matHang.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang_2.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang_2.png" alt="">
+                <div class="ten">Ốp lưng Led cover Galaxy S10+ hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">690.000 đ</div>
+                    <div class="sale">- 42%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>1.100.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang3.png" alt="">
+                <div class="ten">Vòng đeo tay Galaxy Fit-e hàng chính hãng</div>
+                <div class="gia">
+                    <div class="gia_that">590.000 đ</div>
+                    <div class="sale">- 40%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>900.000 đ</del></div>
+            </div>
+            <div class="_1o">
+                <img src="matHang3.png" alt="">
+                <div class="ten">Balo laptop Targus TSB162AP chính hãng hàng thanh lý</div>
+                <div class="gia">
+                    <div class="gia_that">299.000 đ</div>
+                    <div class="sale">- 97%</div>
+                </div>
+                <div class="gia_cu" style="color: gray;"><del>3.000.000 đ</del></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

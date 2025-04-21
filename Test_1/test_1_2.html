@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        header{
+            display: flex;
+            margin: auto;
+            width: 1000px;
+            height: 50px;
+            justify-content: space-between;
+        }
+        header .trai{
+            /* width: 30%; */
+            height: 100%;
+            margin-left: 10px;
+        }
+        header .giua{
+            /* width: 40%; */
+            
+            line-height: 50px;
+            height: 100%;
+        }
+        header .giua .o{
+            margin-top: 5px;
+            height: 35px;
+            width: fit-content;
+            line-height: 35px;
+            border: 1px solid gray;
+        }
+        header input, header select{
+            border: none;
+            height: 30px;
+            
+        }
+        header select{
+            border-left: 2px solid black ;
+        }
+        header .phai{
+            width: 30%;
+        }
+        header .phai .nd{margin-right: 50px;
+            margin: 10px;
+            background-color: #FF3399;
+            padding: 7px;
+            width:120px;
+            height: 20px;
+            line-height: 20px;color: white;
+            font-weight: bold;
+            text-align: center;
+        }
+        header .phai .nd:hover{
+            color: red;
+            background-color: yellow;
+        }
+        nav{
+            margin-top: 15px;
+            width: 100%;
+            background-color: black;
+        }
+        nav ul.cha{
+            width: 1000px; 
+            margin: 0 auto;
+            list-style: none;
+            display: flex;
+        }
+        nav ul.cha li{
+            height: 30px;
+            line-height: 30px;
+            position: relative;
+            background-color: black;
+            padding: 0 20px;
+            text-align: center;
+        }
+        nav ul.cha li ul.con{
+            position: absolute;
+            list-style-image: url(icon.png);
+            display: none;
+            top: 30px;
+            width: 150px;
+        }
+        nav ul.cha li:hover{
+            background-color: #FF3399;
+        }
+        nav ul.cha li:hover ul.con{
+            display: grid;
+        }
+        nav a{
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .content{
+            margin: auto;
+            width: 900px;
+        }
+        .content .tren{
+            margin-top: 15px;
+            position: relative;
+            display: flex;
+        }
+        .content .tren .phai{
+            position: absolute;
+            right: 0;
+        }
+        .content .duoi{
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .content ._1o{
+            border: 1px gray solid;
+        }
+        .content .duoi ._1o img{
+            width: 248px;
+            height: 300px;
+        }
+        .content .duoi p{
+            text-align: center;
+        }
+        .gia{
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="trai">
+            <img src="2.png" alt="">
+        </div>
+        <div class="giua">
+            <div class="o">
+                <input type="text" required placeholder="Search">
+            <select name="2" id="2">
+                <option value="_1">Lựa chọn 1</option>
+                <option value="_2">Lựa chọn 2</option>
+                <option value="_3">Lựa chọn 3</option>
+                <option value="_4">Lựa chọn 4</option>
+                <option value="_5">Lựa chọn 5</option>
+            </select>
+            </div>
+        </div>
+        <div class="phai">
+            <div class="nd">0 Item($)-$0.00</div>
+        </div>
+    </header>
+    <nav>
+            <ul class="cha">
+                <li><a href="">Home</a></li>
+                <li><a href="">Women</a></li>
+                <li><a href="">Men</a>
+                    <ul class="con">
+                        <li><a href="">Coats (0)</a></li>
+                        <li><a href="">T-Shirts(0)</a></li>
+                        <li><a href="">Tennis (0)</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Jewelry</a></li>
+                <li><a href="">Clothing</a></li>
+                <li><a href="">Jeans</a></li>
+                <li><a href="">Accessories</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">The girl Racing Bicycle</a></li>
+            </ul>
+    </nav>
+    <div class="content">
+        <div class="tren" >
+            <div class="trai">
+                <button><img src="icon1.png" alt=""></button>
+                <button><img src="icon1.png" alt=""></button>
+            </div>
+            <div class="phai">
+                <button style="width: 30px;height: 30px;">1</button>
+                <button style="width: 30px;height: 30px;">2</button>
+                <button style="width: 30px;height: 30px;">3</button>
+                <button style="width: 30px;height: 30px;">></button>
+                <button style="width: 30px;height: 30px;">>|</button>
+            </div>
+        </div>
+        <div class="duoi">
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+            <div class="_1o">
+                <div class="anh"><img src="xinhgai.png" alt=""></div>
+                <div class="mota">
+                    <p>
+                        <b>Apple Cinema 30''</b> <br>
+                        <i>$110.00</i> <br>
+                        <del>$122.00</del>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
