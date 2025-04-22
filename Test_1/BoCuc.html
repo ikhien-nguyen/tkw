@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thiết kế web IT6039</title>
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 15px;
+    margin:0;
+    position: relative;
+    height:20px;
+}
+
+.logo {
+    position: absolute;
+    left:10px;
+    height: 100%;
+    margin-left: 40px;
+}
+
+.search-box {
+    position: absolute;
+    left:400px;
+    padding: 8px;
+    margin: 20px;
+}
+
+.cart {
+    position: absolute;
+    right:10px;
+    background: #FF3399;
+    color: white;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+.ab{
+    clear:both;
+}
+
+.cart:hover {
+    background: yellow;
+    color: red;
+}
+
+.main-menu {
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-menu li {
+    position: relative;
+}
+.main-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-menu a:hover {
+    background-color: #FF3399; /* Pink color when hovered */
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left : -50px;
+    align-items: center;
+
+}
+.submenu li{
+    list-style: circle;
+}
+.main-menu li:hover .submenu {
+    display: block;
+}
+.submenu a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: black;
+    color: white;
+}
+.danh-muc{
+    display:flex;
+    position: relative;
+    height:20px;
+}
+.trai{
+    position: absolute;
+    left:40px;
+    display: flex;
+    gap:20px;
+}
+.phai{
+    position: absolute;
+    right:40px;
+}
+.op{
+    width:100px;
+    height:30px;
+    top:0;
+}
+.content {
+    padding: 20px;
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 400px;
+    overflow: hidden;
+    position: relative;
+}
+
+.product img {
+    width: 400px;
+    height: 200px;
+    transition: 0.3s;
+
+}
+.label {
+  position: absolute;
+  padding: 5px 10px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+}
+.new {
+  background-color: orange;
+  top: 10px;
+  left: 0;
+}
+
+.sale {
+  background-color: teal;
+  top: 10px;
+  right: 0;
+}
+.product img:hover {
+    transform: scale(1.1);
+}
+.info{
+    background-color: blue;
+    padding: 10px;
+    text-align: center;
+}
+.info h3:hover{
+    color: yellow;
+    cursor: pointer;
+}
+.price-old{
+    color: white;
+    text-decoration: line-through;
+}
+.price-new{
+    color:red;
+}
+
+/* .info {
+    background: #003366;
+    padding: 10px;
+}
+
+.info h3 {
+    color: white;
+    margin: 0;
+}
+
+.info h3:hover {
+    color: #FFFF66;
+}
+
+.price-old {
+    color: white;
+    text-decoration: line-through;
+}
+
+.price-new {
+    color: red;
+} */
+</style>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logo" class="logo">
+        <input type="text" placeholder="Search..." class="search-box">
+        <div class="cart">0 Item($)-$0.00</div>
+        <div class="ab"></div>
+    </div>
+
+    <nav>
+        <ul class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a class="active" href="#">Men</a>
+                <ul class="submenu">
+                    
+                        <ul>
+                            <li><a href="#">Clothing</a>
+                            <li><a href="#">Coats</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tennis</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="danh-muc">
+        <div class="trai">
+            <button style="width: 30px;height: 30px;"><img src="icon1.png"></button>
+            <button style="width: 30px;height: 30px;"><img src="icon1.png"></button>
+            <select title="Default" class="op">
+                <option>1</option>
+            </select>
+        </div>
+        <div class="phai">
+            <button style="width: 30px;height: 30px;">1</button>
+            <button style="width: 30px;height: 30px;">2</button>
+            <button style="width: 30px;height: 30px;">3</button>
+            <button style="width: 30px;height: 30px;">></button>
+            <button style="width: 30px;height: 30px;">>|</button>
+        </div>
+    </div>
+    <div class="content">
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image.jpg" alt="Product">
+            <span class="label new">NEW</span>
+            <span class="label sale">SALE</span>
+            <div class="info">
+                <h3>Sản phẩm A</h3>
+                <p class="price-old">$110.00</p>
+                <p class="price-new">$98.00</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- <h2>Bài Javascript:</h2>
+    <input type="text" id="textInput" maxlength="255" placeholder="Nhập chuỗi...">
+    <button onclick="countWords()">Kiểm tra</button>
+    <p id="result"></p>  -->
+
+    <script>
+        function countWords() {
+            let text = document.getElementById("textInput").value;
+            let words = text.split(/\s+/);
+            let count = 0;
+            words.forEach(function(word){
+                if(word.length === 4 && word.charAt(0).toLowerCase() === 'm'){
+                    count++;
+                }
+            });
+            document.getElementById("result").innerText = "Có " + count + " từ có 4 ký tự và bắt đầu bằng 'm'.";
+        }
+    </script>
+
+</body>
+</html>
