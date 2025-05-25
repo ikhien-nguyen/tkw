@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Chuẩn</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Times New Roman', serif;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      background-color: #a1a1a1; /* màu xám gần giống */
+      padding: 10px 20px;
+    }
+
+    .header img {
+      width: 70px;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .thongtin {
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .thongtin h3 {
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 1.5;
+    }
+.main-menu {
+    list-style: none;
+    padding: 0;
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.main-menu li {
+    position: relative;
+}
+.main-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.main-menu a:hover {
+    background-color: #FF3399; 
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left : -50px;
+    align-items: center;
+
+}
+.submenu li{
+    list-style: circle;
+}
+.main-menu li:hover .submenu {
+    display: block;
+}
+.submenu a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: black;
+    color: white;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.left{
+    padding: 10px;
+    flex:1;
+}
+.mid{
+    flex:3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap:35px;
+}
+.right{
+    flex:1;
+}
+.mid img{
+    width: 70px;
+    height:70px;
+}
+.midcontent{
+    display:flex;
+}
+.right h4 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.right ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.right ul li {
+  margin-bottom: 5px;
+}
+
+.right a {
+  text-decoration: none;
+  color: #000;
+}
+
+.right a:hover {
+  text-decoration: underline;
+}
+.footer{
+    background-color: black;
+    width: 100%;
+    color: white;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <img src="xinhgai.png" alt="Logo">
+    <div class="thongtin">
+      <h3>TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</h3>
+      <h3>KHOA CÔNG NGHỆ THÔNG TIN</h3>
+    </div>
+  </div>
+      <nav>
+        <ul class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a class="active" href="#">Men</a>
+                <ul class="submenu">
+                    
+                        <ul>
+                            <li><a href="#">Clothing</a>
+                            <li><a href="#">Coats</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tennis</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div class="left">
+            <h2>TU SACH</h2>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Blog</a></li>
+        </div>
+        <div class="mid">
+            <div class="midcontent">
+                <img src="xinhgai.png">
+                <div class="noidung">
+                    <b>Mẫu tin 1</b>
+                    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                </div>
+            </div>
+                        <div class="midcontent">
+                <img src="xinhgai.png">
+                <div class="noidung">
+                    <b>Mẫu tin 1</b>
+                    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                </div>
+            </div>
+                        <div class="midcontent">
+                <img src="xinhgai.png">
+                <div class="noidung">
+                    <b>Mẫu tin 1</b>
+                    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                </div>
+            </div>
+                        <div class="midcontent">
+                <img src="xinhgai.png">
+                <div class="noidung">
+                    <b>Mẫu tin 1</b>
+                    <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="dangnhap">
+                <a href="#">Đăng ký</a> | <a href="#">Đăng nhập</a>
+            </div>
+            <!-- <div>
+                <table border="1">
+                    <tr>
+                        <td>Giỏ hàng</td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Tổng cộngcộng
+                        <br>
+                        <a>Thanh toán</a>
+                        </td>
+                    </tr>
+                </table>
+            </div> -->
+             <div class="giohang">
+    <h4>Giỏ hàng</h4>
+    <p>Tổng cộng: 0 VNĐ</p>
+    <ul>
+      <li><a href="#">Xem giỏ hàng</a></li>
+      <li><a href="#">Thanh toán</a></li>
+    </ul>
+  </div>
+  <div class="hotro">
+    <h4>Hỗ trợ trực tuyến</h4>
+    <p>Admin Web</p>
+  </div>
+  <div class="tinmoi">
+    <h4>Tin mới</h4>
+    <ul>
+      <li><a href="#">Máy in Epson T60 nháy 2 đèn</a></li>
+      <li><a href="#">Sửa lỗi máy in Epson T60, T50 không nhận mực</a></li>
+    </ul>
+  </div>
+        </div>
+    </div>
+    <div class="footer">
+        <h2>BAN QUYEN THUOC CNTT</h2>
+    </div>
+</body>
+</html>

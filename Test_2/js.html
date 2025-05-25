@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+            <table border="2">
+            <tr><td colspan="2" style="text-align:center;">TÍNH LƯƠNG NHÂN VIÊN</td></tr>
+            <tr>
+                <td>Tên nhân viên</td>
+                <td><input type="text" id="tenNV"></td>
+            </tr>
+                        <tr>
+                <td>Số tháng làm việc</td>
+                <td><input type="text" id="soThangLamViec"></td>
+            </tr>
+                        <tr>
+                <td>Hệ số lương</td>
+                <td><input type="text" id="heSoLuong" readonly></td>
+            </tr>
+                        <tr>
+                <td>Lương cơ bản</td>
+                <td><input type="text" id="luongCoBan" readonly></td>
+            </tr>
+                        <tr>
+                <td>Lương tháng</td>
+                <td><input type="text" id="luongThang" readonly></td>
+            </tr>
+                                    <tr>
+                <td>Thuế thu nhập</td>
+                <td><input type="text" id="thueThuNhap" readonly></td>
+            </tr>
+            <tr>
+                <td>Thực lĩnh</td>
+                <td><input type="text" id="thucLinh" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="button" value="Tính tiền" onclick="tinhLuong()">
+                    <input type="reset" value="Xóa">
+                </td>
+            </tr>
+    </table>
+    </form>
+
+</body>
+<script>
+    function tinhLuong(){
+        var soThang=parseInt(document.getElementById("soThangLamViec").value);
+        var luongCB=650000;
+        document.getElementById("luongCoBan").value=luongCB;
+        var heSo;
+        if(soThang<12) heSo=1.92;
+        else if(soThang<36) heSo=2.34;
+        else if(soThang<60) heSo=3;
+        else heSo=4.5;
+        document.getElementById("heSoLuong").value=heSo;
+        var luongThang= luongCB * heSo;
+        document.getElementById("luongThang").value=luongThang;
+        var thueThuNhap;
+        if(luongThang<7000000) thueThuNhap=0.1;
+        else if(luongThang<15000000) thueThuNhap=0.2;
+        else thueThuNhap=0.3;
+        document.getElementById("thueThuNhap").value=thueThuNhap;
+        var thucLinh= luongThang- luongThang*thueThuNhap;
+        document.getElementById("thucLinh").value=thucLinh;
+    }
+</script>
+</html>

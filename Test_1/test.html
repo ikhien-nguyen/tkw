@@ -5,7 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    nav ul li a{
+        list-style: none;
+        text-decoration: none;
+        color: white;
+    }
+    .main-menu{
+        display:flex;
+        background-color: black;
+        justify-content: space-around;
+        height: 35px;
+        align-items: center;
+    }
+    .main-menu li{
+        position: relative;
+    }
+    .main-menu li:hover{
+        background-color: palevioletred;
+    }
+    .submenu{
+        display:none;
+        background-color: white;
+        list-style: none;
+        text-decoration: none;
+        position: absolute;
+            top: 100%;
+    left : -50px;
+    }
+    .submenu ul li{
+        color:black;
+    }
+    .main-menu li:hover .submenu {
+        display:block;
+    }
+</style>
+
 <body>
-    <div></div>
+    <nav>
+        <ul class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a class="active" href="#">Men</a>
+                <ul class="submenu">
+                    
+                        <ul>
+                            <li><a href="#">Clothing</a>
+                            <li><a href="#">Coats</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Tennis</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Jewelry</a></li>
+            <li><a href="#">Books</a></li>
+            <li><a href="#">Clothing</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Blog</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
