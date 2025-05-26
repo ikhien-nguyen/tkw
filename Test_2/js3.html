@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Sắp câu theo quy luật</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f0f0f0;
+      padding: 30px;
+    }
+    .container {
+      width: 400px;
+      margin: auto;
+      border: 2px solid #000;
+      background-color: #d0e9f9;
+      padding: 20px;
+      text-align: center;
+    }
+    h3 {
+      background-color: #66c;
+      color: white;
+      padding: 10px;
+      margin: -20px -20px 20px -20px;
+    }
+    input[type="text"] {
+      width: 90%;
+      padding: 5px;
+      margin: 10px 0;
+    }
+    button {
+      padding: 6px 15px;
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>SẮP CÂU THEO QUY LUẬT</h3>
+    <label>Nhập câu ban đầu:</label><br>
+    <input type="text" id="input" placeholder="Nhập câu IN HOA..."><br>
+    <label>Câu sau khi sắp lại:</label><br>
+    <input type="text" id="output" readonly><br>
+    <button onclick="sapXep()">Sắp xếp</button>
+    <button onclick="vietLai()">Viết lại</button>
+  </div>
+</body>
+<script>
+    function sapXep(){
+        var input=document.getElementById("input").value.trim();
+        var word=input.split(/\s+/);
+        if(word.length>20){
+            alert("nhap khong qua 20 tu");
+            return;
+        }
+        for(i=0;i<word.length;i++){
+            if(word[i].length>10){
+            alert("1 tu khong qua 10 ki tu");
+            return;
+            }
+        }
+        word.sort();
+        var output=word.join(" ");
+        document.getElementById("output").value=output;
+    }
+</script>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Nhập họ và tên</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 30px;
+    }
+    .container {
+      width: 500px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    label {
+      display: inline-block;
+      width: 100px;
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      width: 300px;
+      padding: 5px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <label for="hoten">Họ và tên:</label>
+    <input type="text" id="hoten"><br>
+
+    <label for="ten">Tên:</label>
+    <input type="text" id="ten" readonly><br>
+
+    <button onclick="hienThi()">Hiển thị</button>
+    <button onclick="huyBo()">Hủy bỏ</button>
+  </div>
+
+  <script>
+    function chuanHoa(str) {
+      return str.trim().toLowerCase().replace(/\s+/g, " ");
+    }
+
+    function hienThi() {
+      let input = document.getElementById("hoten").value;
+      let chuanhoa = chuanHoa(input);
+
+      // Tách tên từ cuối
+      let parts = chuanhoa.split(" ");
+      let ten = parts[parts.length - 1];
+
+      document.getElementById("hoten").value = chuanhoa;
+      document.getElementById("ten").value = ten;
+    }
+
+    function huyBo() {
+      document.getElementById("hoten").value = "";
+      document.getElementById("ten").value = "";
+    }
+  </script>
+</body>
+</html>
